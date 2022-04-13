@@ -28,6 +28,7 @@ module.exports = {
       'error',
       2,
       {
+        SwitchCase: 1,
         ignoredNodes: [
           'JSXElement',
           'JSXElement > *',
