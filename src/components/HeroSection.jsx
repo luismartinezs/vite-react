@@ -1,11 +1,13 @@
-import GradientText from '@/components/GradientText'
+import HeroTitle from '@/components/HeroTitle'
+import HeroSubtitle from '@/components/HeroSubtitle'
+import ButtonList from '@/components/ButtonList'
 
 export default function HeroSection() {
   return (
-    <h1 className="text-7xl font-black">
-      The Progressive
-      <GradientText>JavaScript</GradientText>
-      Framework
-    </h1>
+    <div className="flex flex-col justify-center items-center py-20 md:max-w-4xl max-w-sm mx-auto text-center space-y-8">
+      <HeroTitle />
+      <HeroSubtitle />
+      <ButtonList />
+    </div>
   )
 }
