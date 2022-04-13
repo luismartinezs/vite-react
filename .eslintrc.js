@@ -1,27 +1,54 @@
 module.exports = {
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "node": true
+  env: {
+    browser: true,
+    es2021: true,
+    node: true,
   },
-  "extends": [
-    "plugin:react/recommended",
-    "airbnb"
-  ],
-  "parserOptions": {
-    "ecmaFeatures": {
-      "jsx": true
+  extends: ['plugin:react/recommended', 'airbnb'],
+  settings: {
+    'import/resolver': {
+      alias: {
+        extensions: ['.js', '.jsx'],
+        map: [['@', './src']],
+      },
     },
-    "ecmaVersion": "latest",
-    "sourceType": "module"
   },
-  "plugins": [
-    "react", "prettier"
-  ],
-  "rules": {
-    "semi": 0,
-    "comma-dangle": 0,
-    "prettier/prettier": "error",
-    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-  }
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+  },
+  plugins: ['react', 'prettier'],
+  rules: {
+    semi: 0,
+    'comma-dangle': 0,
+    indent: [
+      'error',
+      2,
+      {
+        ignoredNodes: [
+          'JSXElement',
+          'JSXElement > *',
+          'JSXAttribute',
+          'JSXIdentifier',
+          'JSXNamespacedName',
+          'JSXMemberExpression',
+          'JSXSpreadAttribute',
+          'JSXExpressionContainer',
+          'JSXOpeningElement',
+          'JSXClosingElement',
+          'JSXText',
+          'JSXEmptyExpression',
+          'JSXSpreadChild',
+        ],
+      },
+    ],
+    'react/jsx-uses-react': 'off',
+    'react/react-in-jsx-scope': 'off',
+    'react/prop-types': ['off'],
+    'prettier/prettier': 'error',
+    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+  },
 }
