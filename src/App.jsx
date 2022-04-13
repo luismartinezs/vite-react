@@ -3,8 +3,8 @@ import './App.css'
 function App() {
 
   return (
-    <div className="App">
-      <div className="text-indigo-600 text-4xl font-extrabold">
+    <div className="font-base">
+      <div className="text-7xl font-black">
         Hello world
       </div>
     </div>
