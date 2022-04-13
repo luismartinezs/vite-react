@@ -2,7 +2,7 @@
 
 - [ ]  Duplicate Vue website header
 - [x]  Use tailwind
-- [ ]  Configure fonts
+- [x]  Configure fonts
 - [ ]  Configure code formatting
 - [ ]  Use tiny components with single responsibility
 - [ ]  Create some kind of state, whatever it is
