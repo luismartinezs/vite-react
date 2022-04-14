@@ -1,27 +1,41 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
 import './ThemeSwitch.css'
+import { useTheme, useThemeDispatch } from '@/store/Theme'
 // eslint-disable-next-line import/no-unresolved
 import IconSun from '~icons/heroicons-outline/sun'
 // eslint-disable-next-line import/no-unresolved
 import IconMoon from '~icons/heroicons-outline/moon'
 
 export default function ThemeSwitch() {
-  const [darkMode, setDarkMode] = useState(false)
+  const theme = useTheme()
+  const dispatch = useThemeDispatch()
 
   function handleClick() {
-    setDarkMode(!darkMode)
+    dispatch({
+      type: 'toggle-theme',
+    })
   }
+
+  useEffect(() => {
+    if (theme.darkMode) {
+      document.documentElement.classList.add('dark')
+    } else {
+      document.documentElement.classList.remove('dark')
+    }
+  }, [theme])
 
   return (
     <button
       onClick={handleClick}
       type="button"
       role="switch"
-      aria-checked={!darkMode}
+      aria-checked={!theme.darkMode}
       className="switch"
       aria-label="toggle theme"
     >
-      <span aria-hidden="true">{darkMode ? <IconMoon /> : <IconSun />}</span>
+      <span aria-hidden="true">
+        {theme.darkMode ? <IconMoon /> : <IconSun />}
+      </span>
     </button>
   )
 }
