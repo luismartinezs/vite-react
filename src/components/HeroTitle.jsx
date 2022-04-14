@@ -14,11 +14,7 @@ export default function HeroTitle() {
   )
 
   const darkThemeTitle = (
-    <>
-      <GradientText>The Progressive</GradientText>
-      <br />
-      <GradientText>JavaScript Framework</GradientText>
-    </>
+    <GradientText>The Progressive JavaScript Framework</GradientText>
   )
 
   return (
