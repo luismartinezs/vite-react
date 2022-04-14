@@ -17,10 +17,11 @@ export default function ThemeSwitch() {
   }
 
   useEffect(() => {
+    const html = document.firstElementChild
     if (theme.darkMode) {
-      document.documentElement.classList.add('dark')
+      html.classList.add('dark')
     } else {
-      document.documentElement.classList.remove('dark')
+      html.classList.remove('dark')
     }
   }, [theme])
 
