@@ -12,7 +12,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="font-base text-gray-700 overflow-x-hidden bg-white dark:bg-gray-700">
+      <div className="font-base text-gray-700 overflow-x-hidden bg-white dark:bg-gray-800 transition duration-300">
         <BarSection barHeight={barHeight} />
         <HeaderSection headerHeight={headerHeight} offsetTop={barHeight} />
         <main style={{ paddingTop: headerHeight + barHeight }}>

@@ -10,7 +10,7 @@ export default function BaseButton({
       case 'primary':
         return `${base} bg-primary-500 hover:bg-primary-600 text-white`
       case 'secondary':
-        return `${base} bg-gray-100 hover:bg-gray-200 text-gray-500`
+        return `${base} bg-gray-100 hover:bg-gray-200 text-gray-500 dark:bg-gray-700 dark:hover:bg-gray-600 dark:text-secondary-100`
       default:
         return ''
     }

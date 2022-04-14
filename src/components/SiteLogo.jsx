@@ -6,7 +6,7 @@ export default function SiteLogo() {
         alt=""
         className="w-7 h-7"
       />
-      <span className="font-semibold">React.js</span>
+      <span className="font-semibold dark:text-gray-200">React.js</span>
     </div>
   )
 }
