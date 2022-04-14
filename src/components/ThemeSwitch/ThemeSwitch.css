@@ -10,20 +10,19 @@ button.switch span {
 }
 
 [role='switch'] > span {
-  @apply p-px h-6 w-6 flex items-center justify-center;
+  @apply p-px h-6 w-6 flex items-center justify-center relative;
 }
 
 [role='switch'] > span > * {
   @apply h-4 w-4 text-gray-400;
 }
 
-/* OFF */
-[role='switch'][aria-checked='false'] > :first-child,
-[role='switch'][aria-checked='true'] > :last-child {
-  @apply bg-white rounded-full border text-gray-400;
+/* OFF STATE - LIGHT MODE */
+[role='switch'] > :first-child {
+  @apply bg-white rounded-full border text-gray-400 transition-transform;
 }
 
-/* ON */
-[role='switch'][aria-checked='false'] > :last-child,
+/* ON STATE - DARK MODE */
 [role='switch'][aria-checked='true'] > :first-child {
+  @apply translate-x-[26px];
 }

@@ -1,6 +1,6 @@
 import SiteLogo from '@/components/SiteLogo'
 import LineSpacer from '@/components/LineSpacer'
-import ThemeSwitch from '@/components/ThemeSwitch'
+import ThemeSwitch from '@/components/ThemeSwitch/ThemeSwitch'
 
 export default function HeaderSection({ headerHeight = 60, offsetTop = 0 }) {
   return (

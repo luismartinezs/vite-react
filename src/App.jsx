@@ -10,7 +10,7 @@ function App() {
   const barHeight = 24
 
   return (
-    <div className="font-base text-gray-700 overflow-x-hidden">
+    <div className="font-base text-gray-700 overflow-x-hidden bg-white dark:bg-gray-700">
       <BarSection barHeight={barHeight} />
       <HeaderSection headerHeight={headerHeight} offsetTop={barHeight} />
       <main style={{ paddingTop: headerHeight + barHeight }}>

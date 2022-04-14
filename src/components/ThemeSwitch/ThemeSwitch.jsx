@@ -21,12 +21,7 @@ export default function ThemeSwitch() {
       className="switch"
       aria-label="toggle theme"
     >
-      <span aria-hidden="true">
-        <IconSun />
-      </span>
-      <span aria-hidden="true">
-        <IconMoon />
-      </span>
+      <span aria-hidden="true">{darkMode ? <IconMoon /> : <IconSun />}</span>
     </button>
   )
 }
