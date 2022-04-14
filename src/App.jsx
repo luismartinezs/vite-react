@@ -1,18 +1,25 @@
 import HeroSection from '@/components/HeroSection'
-import HeaderSection from './components/HeaderSection'
-import LineSpacer from './components/LineSpacer'
-import NoteSection from './components/NoteSection'
-import FeatureSection from './components/FeatureSection'
+import HeaderSection from '@/components/HeaderSection'
+import LineSpacer from '@/components/LineSpacer'
+import NoteSection from '@/components/NoteSection'
+import FeatureSection from '@/components/FeatureSection'
+import BarSection from '@/components/BarSection'
 
 function App() {
+  const headerHeight = 54
+  const barHeight = 24
+
   return (
     <div className="font-base text-gray-700 overflow-x-hidden">
-      <HeaderSection />
-      <HeroSection />
-      <LineSpacer />
-      <NoteSection />
-      <LineSpacer />
-      <FeatureSection />
+      <BarSection barHeight={barHeight} />
+      <HeaderSection headerHeight={headerHeight} offsetTop={barHeight} />
+      <main style={{ paddingTop: headerHeight + barHeight }}>
+        <HeroSection />
+        <LineSpacer />
+        <NoteSection />
+        <LineSpacer />
+        <FeatureSection />
+      </main>
     </div>
   )
 }

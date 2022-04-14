@@ -2,11 +2,14 @@ import SiteLogo from '@/components/SiteLogo'
 import LineSpacer from '@/components/LineSpacer'
 import DarkModeSwitch from '@/components/DarkModeSwitch'
 
-export default function HeaderSection() {
+export default function HeaderSection({ headerHeight = 60, offsetTop = 0 }) {
   return (
-    <div className="sticky top-0">
-      <header className="bg-white py-4 px-6">
-        <div className="max-w-6xl mx-auto flex justify-between">
+    <div
+      className="fixed left-0 right-0 bg-white"
+      style={{ height: headerHeight, top: offsetTop }}
+    >
+      <header className="h-full w-full px-6 flex items-center">
+        <div className="w-full max-w-6xl mx-auto flex justify-between">
           <div>
             <SiteLogo />
           </div>
