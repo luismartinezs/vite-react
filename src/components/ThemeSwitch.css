@@ -1,0 +1,29 @@
+button.switch {
+  --width: 52px;
+  @apply rounded-full border flex items-center justify-between bg-gray-200;
+  width: var(--width);
+  height: calc(var(--width) / 2);
+}
+
+button.switch span {
+  pointer-events: none;
+}
+
+[role='switch'] > span {
+  @apply p-px h-6 w-6 flex items-center justify-center;
+}
+
+[role='switch'] > span > * {
+  @apply h-4 w-4;
+}
+
+/* OFF */
+[role='switch'][aria-checked='false'] > :first-child,
+[role='switch'][aria-checked='true'] > :last-child {
+  @apply bg-white rounded-full border text-gray-400;
+}
+
+/* ON */
+[role='switch'][aria-checked='false'] > :last-child,
+[role='switch'][aria-checked='true'] > :first-child {
+}
