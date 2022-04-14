@@ -14,7 +14,7 @@ button.switch span {
 }
 
 [role='switch'] > span > * {
-  @apply h-4 w-4;
+  @apply h-4 w-4 text-gray-400;
 }
 
 /* OFF */
